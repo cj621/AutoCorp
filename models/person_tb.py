@@ -11,5 +11,5 @@ class Person(UserMixin, db.Model):
 	valid_upto = db.Column(db.DateTime(timezone=False), nullable=False)
 	dob = db.Column(db.Date, nullable=False)
 	address = db.Column(db.String(500), nullable=False)
-	mobile_no = db.Column(db.Integer, nullable=False)
+	mobile_no = db.Column(db.String(15), nullable=False)
 	created_at = db.Column(db.DateTime(timezone=False), default=datetime.now(), nullable=False)

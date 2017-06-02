@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<title>AutoCorp | {{current_user.police_name}}'s Rule Break Page</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+	  
+	  <div class="container">
+	    
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">AutoCorp</a>
+	    </div>	  
+	  </div>
+	
+	</nav>
+
+	
+
+	<div class="container">	
+		<h1 class="text-center">{{ current_user.police_name }}</h1>
+		<p class="text-center"><a href="/logout"><button class="btn btn-primary">Logout!</button></a></p>
+	</div>
+
+	<div class="container">
+		<h2>OTP Matched Successfully!! Yay!!</h2>
+	</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>

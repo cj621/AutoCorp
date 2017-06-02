@@ -1,9 +1,50 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<title>AutoCorp | Login</title>
 </head>
+
 <body>
-	<h1>This is the Login Template in the templates folder.</h1>
+	<nav class="navbar navbar-inverse">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">AutoCorp</a>
+	    </div>
+	  </div>
+	</nav> <!-- Brand Navbar end -->
+
+	<div class="container">
+		<div class="container">
+			<h2 class="text-center">Welcome User. Please Login.</h2>
+			<div class="row">
+				<form action="/loggedin" method="POST">
+		        	User ID: <br />
+		        	<input type="text" class="form-control" name="id" placeholder = "User ID" /><br />
+		        	Password: <br />
+		        	<input type="password" class="form-control" name="password" placeholder = "Password" /><br />
+		        	<input type="submit" class="btn btn-primary" value="Login">
+		    	</form>	
+
+		    	{% with messages = get_flashed_messages() %}
+		    	{% if messages %}
+		    		
+		    			{% for message in messages %}
+		    				<br /><p class="flashes"><strong>{{ message }}</strong></p>
+		    			{% endfor %}
+		    		
+		    	{% endif %}
+		    	{% endwith %}
+			</div> <!-- Main Data end -->
+  
+		</div> <!-- Inner Container end -->
+
+	</div> <!-- Outer Container end -->
+
 </body>
+
 </html>
