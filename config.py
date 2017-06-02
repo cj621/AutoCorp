@@ -1,8 +1,0 @@
-DEBUG = True
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:chitts@localhost/autocorp'
-SQLALCHEMY_TRACK_MODIFICATIONS = False
-SECRET_KEY = 'Thisisasecret!'
-
-TWILIO_ACCOUNT_SID = 'ACaf0cf4a5fb2eabc08bc9280a430a214a'
-TWILIO_AUTH_TOKEN = 'a57f458069dca4b690f56f0466ef8a2b'
-TWILIO_FROM = '+13525770269'

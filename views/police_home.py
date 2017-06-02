@@ -18,7 +18,6 @@ def send_sms():
 		ph_no = int(ph_no)
 		otp = randint(67890, 99999)
 		session[current_user.police_id+'_otp'] = otp
-		print(session[current_user.police_id+'_otp'])
 		# Account SID from twilio.com/console
 		account_sid = app.config['TWILIO_ACCOUNT_SID']
 		# Auth Token from twilio.com/console
